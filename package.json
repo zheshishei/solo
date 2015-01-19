@@ -1,0 +1,27 @@
+{
+  "name": "foodJourney",
+  "version": "0.0.1",
+  "description": "foodJourney allows you to search for food in your location",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zheshishei/2014-12-solo.git"
+  },
+  "keywords": [
+    "food",
+    "journey"
+  ],
+  "author": "Alan Sun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zheshishei/2014-12-solo/issues"
+  },
+  "homepage": "https://github.com/zheshishei/2014-12-solo",
+  "dependencies": {
+    "body-parser": "^1.10.1",
+    "express": "^4.11.0"
+  }
+}

@@ -7,13 +7,16 @@ var app = express();
 // app.use(bodyParser());
 
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/client'));
 
 
 app.get('/food', foodHandler);
 
+// app.get('/user', userHandler);
+
 app.get('*', function(req, res) {
-  res.sendFile(__dirname + '/public/views/index.html');
+  res.sendFile(__dirname + '/client/index.html');
 });
+
 
 module.exports = app;

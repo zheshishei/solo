@@ -1,0 +1,10 @@
+<h2>Cook</h2>
+
+<form ng-submit="search()">
+  <input type="text" ng-model="terms" placeholder="What food would you like to look for?">
+  <input type="text" ng-model="address" placeholder="Your Address">
+  <input type="submit" value="Let's Cook It!"></input>
+</form>
+
+<button ui-sref="cook.list">Results</button>
+<div ui-view></div>

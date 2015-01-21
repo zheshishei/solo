@@ -2,23 +2,26 @@ angular.module('food.Journey.cook', [])
 
 .controller('CookController', function($scope, $state, Places) {
 
+  //volatile
   $scope.terms = '';
-  $scope.searchedTerms = '';
   $scope.address = '944 Market Street, San Francisco, CA';
-  $scope.page = 0;
+
+  //non-volatile (previous search)
+  $scope.searchedTerms = '';
+  $scope.params = {};
+  $scope.places = null;
 
   $scope.search = function() {
     $scope.searchedTerms = $scope.terms;
 
-    params = {};
-    params.category_filter = 'food';
-    params.sort = 1;
-    params.radius_filter = 10000;
-    params.location = $scope.address;
-    params.term = $scope.searchedTerms;
+    $scope.params.category_filter = 'food';
+    $scope.params.sort = 0;
+    $scope.params.radius_filter = 10000;
+    $scope.params.location = $scope.address;
+    $scope.params.term = $scope.searchedTerms;
 
-    Places.search(params).then(function(data){
-      $scope.data = data;
+    Places.search($scope.params).then(function(data){
+      $scope.places = data.businesses;
       $state.go('cook.list');
     });
   };

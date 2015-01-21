@@ -1,0 +1,20 @@
+<h2>Results for {{searchedTerms}}</h2>
+<button ng-click="savePlace()">Takeout (Save)</button>
+<button ng-click="nextPlace()">Nah</button>
+
+<div class="result">
+  <h3><a href="{{currentPlace.url}}" target="_blank">{{currentPlace.name}}</a></h3>
+  <div class="rating"><span>Rating:</span> {{currentPlace.rating}}</div>
+  <div class="snippet">{{currentPlace.snippet_text}}</div>
+  <div>
+    <span>Address</br></span>
+    {{currentPlace.location.display_address[0]}}<br>
+    {{currentPlace.location.display_address[1]}}<br>
+    {{currentPlace.location.display_address[2]}}
+  </div>
+  <div class="categories">
+    <span>Categories<br></span>
+    <div ng-repeat="category in currentPlace.categories">{{category[0]}}</div>
+  </div>
+  <div>
+  </div>

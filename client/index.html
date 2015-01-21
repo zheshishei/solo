@@ -1,19 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ng-app="food.Journey">
 <head>
   <meta charset="utf-8">
   <title>food.Journey</title>
   <base href="">
+  <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700,700italic|Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-  <h1>food.Journey</h1>
+  <header class="header">
+    <h1 ui-sref="home">food.Journey</h1>
 
-  <div ui-view></div>
+    <div>
+      <button ui-sref="consume">Consume</button>
+      <button ui-sref="cook">Cook</button>
+    </div>
+  </header>
+  <div class="main" ui-view></div>
 
   <script type="text/javascript" src="lib/angular.js"></script>
   <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="app/services/services.js"></script>
   <script type="text/javascript" src="app/cook/cook.js"></script>
+  <script type="text/javascript" src="app/cook/cook.detail.js"></script>
+  <script type="text/javascript" src="app/consume/consume.js"></script>
   <script type="text/javascript" src="app/app.js"></script>
 </body>
 </html>

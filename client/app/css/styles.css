@@ -1,0 +1,58 @@
+body {
+  font-family: 'Josefin Sans', 'Times New Roman';
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  width: 600px;
+  padding: 20px;
+  position:relative;
+  left: 50%;
+  margin-left: -340px;
+}
+
+.header {
+  margin: 20px 0;
+}
+
+.header h1 {
+  font-family: 'Lobster Two';
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.header button {
+  width: 49.5%;
+  height: 30px;
+  border-radius: 0;
+  border: none;
+}
+
+.header button:active {
+  background-color: gold;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.main {
+  padding: 20px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0, .1)
+
+}
+
+.result h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.result h3 a {
+  text-decoration: none;
+}
+.result span {
+  font-weight: bold;
+}
+
+.result > div {
+  margin : 20px 0;
+}

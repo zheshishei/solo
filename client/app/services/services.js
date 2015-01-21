@@ -9,7 +9,21 @@ angular.module('food.Journey.services', [])
     });
   };
 
+  var store = function(place) {
+    var url = '/places';
+    return $http.post(url, {'place': place});
+  };
+
+  var retrieveAll = function() {
+    var url = '/places';
+    return $http.get(url).then(function(res) {
+      return res.data;
+    });
+  };
+
   return {
-    search : search
+    search : search,
+    store : store,
+    retrieveAll : retrieveAll
   };
 });

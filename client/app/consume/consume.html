@@ -1,1 +1,18 @@
-<h1>CONSUME</h1>
+<h2>Consume</h2>
+
+<div class="result" ng-repeat="place in savedPlaces">
+  <h3><a href="{{place.url}}" target="_blank">{{place.name}}</a></h3>
+  <div class="rating"><span>Rating:</span> {{place.rating}}</div>
+  <div class="snippet">{{place.snippet_text}}</div>
+  <div>
+    <span>Address</br></span>
+    {{place.location.display_address[0]}}<br>
+    {{place.location.display_address[1]}}<br>
+    {{place.location.display_address[2]}}
+  </div>
+  <div class="categories">
+    <span>Categories<br></span>
+    <div ng-repeat="category in place.categories">{{category[0]}}</div>
+  </div>
+  <div>
+</div>

@@ -1,21 +1,18 @@
 angular.module('food.Journey', [
-  // 'food.Journey.settings', //settings
-  // 'food.Journey.consume',  //use a lunch spot
-  'food.Journey.cook',     //save available lunch spots
+  // 'food.Journey.settings',    //settings
+  'food.Journey.consume',     //use a lunch spot
+  'food.Journey.cook',        //save available lunch spots
+  'food.Journey.cook.detail', //show & save results
   'food.Journey.services',
   'ui.router'
 ]).config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('consume');
 
   $stateProvider
-  .state('home', {
-    url: '/',
-    templateUrl: '/app/home/home.html',
-  })
   .state('consume', {
     url:'/consume',
     templateUrl: '/app/consume/consume.html',
-    // controller: 'ConsumeController'
+    controller: 'ConsumeController'
   })
   .state('cook', {
     url: '/cook',
@@ -23,15 +20,15 @@ angular.module('food.Journey', [
     controller: 'CookController'
   })
   .state('cook.list', {
-    url: '/results',
-    templateUrl: '/app/cook/cook.list.html',
-    // controller: 'CookListController'
-  })
-  .state('settings', {
-    url: '/settings',
-    templateUrl: '/app/settings/settings.html',
-    // controller: 'SettingsController'
+    url: '/result',
+    templateUrl: '/app/cook/cook.detail.html',
+    controller: 'CookDetailController'
   });
+  // .state('settings', {
+  //   url: '/settings',
+  //   templateUrl: '/app/settings/settings.html',
+  //   // controller: 'SettingsController'
+  // })
   // .state('signin', {
   //   url: '/signin',
   //   templateUrl: 'app/auth/signin.html',
